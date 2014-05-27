@@ -1,0 +1,25 @@
+{
+  "name": "grunt-se-launch",
+  "version": "0.1.0",
+  "description": "Grunt tasks to manage a selenium instance. Modification of grunt-selenium-launcher by David Souther (https://github.com/DavidSouther/grunt-selenium-launcher)",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BrianBunker/grunt-se-launch.git"
+  },
+  "keywords": [
+    "grunt",
+    "selenium",
+    "launcher"
+  ],
+  "author": {
+    "name": "Brian Bunker"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrianBunker/grunt-se-launch/issues"
+  },
+  "readmeFilename": "README.md"
+}
