@@ -1,4 +1,4 @@
-# grunt-selenium-launcher
+# grunt-se-launch
 
 A Grunt task to launch a selenium server.
 
