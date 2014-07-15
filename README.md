@@ -29,14 +29,6 @@ Call the task:
 grunt.registerTask('test', [ 'selenium-launch', 'intern'])
 ```
 
-Use the settings exported to the environment to connect to the correct instance:
-
-```javascript
-var driver = new require("selenium-webdriver").Builder()
-	.usingServer(process.env.SELENIUM_HUB)
-	.withCapabilities(webdriver.Capabilities.firefox())
-	.build()
-```
 
 ## API
 
