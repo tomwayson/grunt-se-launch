@@ -39,15 +39,18 @@ module.exports = function(grunt) {
 			var child = spawn('java', [
 				'-jar', options.jarDir + options.jar,
 				'-port', options.port
-			]);
+			].concat(options.chromeDriverExecutable ? ['-Dwebdriver.chrome.driver=' + 
+				options.jarDir + options.chromeDriverExecutable] : []));
 			child.host = '127.0.0.1';
 			child.port = options.port;
 			var badExit = function() {
 				cb(new Error('Could not start Selenium.'));
 			};
-			child.stdout.on('data', function(data) {
-				var sentinal = 'Started org.openqa.jetty.jetty.Server';
-				if (data.toString().indexOf(sentinal) != -1) {
+			
+			child.stdout.on('data', function (data) {
+				
+				var sentinel = 'Started org.openqa.jetty.jetty.Server';
+				if (data.toString().indexOf(sentinel) != -1) {
 					child.removeListener('exit', badExit);
 					cb(null, child);
 				}

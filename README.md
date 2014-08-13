@@ -11,7 +11,8 @@ grunt.initConfig({
     options: {
       port: 4445,
       jarDir: 'C:/Selenium/',
-      jar: 'selenium-server-standalone-2.41.0.jar'
+      jar: 'selenium-server-standalone-2.41.0.jar',
+      chromeDriverExecutable: 'chromedriver.exe'
     }
   }
 })
